@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
+
+header {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 200px;
+    position: fixed; /* Torna o header fixo */
+    width: 100%; /* Garante que o header ocupe toda a largura da tela */
+    background-color: rgb(0, 0, 0); /* Cor de fundo para evitar que o conteúdo de trás apareça */
+    z-index: 1000; /* Garante que o header fique sobre outros elementos */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.logo img {
+    height: 35px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #7171ff;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #7171ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; 
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+main {
+    min-width: 300px;
+    border: 1px solid black;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.hero-section {
+    position: relative;
+    height: 900px; /* Ajuste conforme necessário */
+    background-image: 
+        linear-gradient(to bottom, black 0%, transparent 50%, transparent 50%, black 100%),
+        url('./images/predios.jpg');
+    background-size: cover;  /* Tente usar contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 50px;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.829); /* Sobreposição escura com opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Lato", sans-serif;
+}
+
+.overlay a {
+    padding: 14px 26px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #7171ff; /* Cor de fundo */
+    border: none;
+    border-radius: 20px; /* Deixa o botão mais arredondado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.hero-section .overlay a {
+    color: white;
+    text-decoration: none;
+}
+
+.overlay a:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    transform: translateY(-2px); /* Pequeno movimento para cima ao passar o mouse */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 1400px;
+    margin: auto;
+    font-family: "Lato", sans-serif;
+    margin-top: 200px;;
+}
+
+.about h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 60px;
+    font-weight: 100;
+}
+
+.about a {
+    padding: 14px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    background-color: #7171ff; /* Cor de fundo */
+    border: none;
+    border-radius: 20px; /* Deixa o botão mais arredondado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para o efeito hover */
+    margin-bottom: 250px;
+    
+}
+
+.about a {
+    color: white;
+    text-decoration: none;
+}
+
+.about a:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    transform: translateY(-2px); /* Pequeno movimento para cima ao passar o mouse */
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 1400px;
+    margin: auto;
+    font-family: "Lato", sans-serif;
+}
+
+.services h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.list-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 20px;
+    min-width: 400px;
+    max-width: 1400px;}
+
+.card-services {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 470px;
+    text-align: center;
+    border: 2px solid #ff2e2e;
+}
+
+.card-services img {
+    width: 200px;
+    height: auto;
+    margin: 50px 40px;
+}
+
+.card-services ul {
+    list-style-type: none;
+    padding: 10px;
+    color: white;
+}
+
+.card-services ul li {
+    padding: 10px 0;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.separator {
+    width: 2px;
+    height: 200px;
+    margin: 0 30px 0 30px;
+    background-color: #fff;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 70px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.contato {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.contato p {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.endereco {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    max-width: 1000px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    text-align: center;
+}
+
+.mapa iframe {
+    width: 100%; /* Faz o mapa ocupar 100% da largura disponível */
+    height: 150px;
+    margin-top: 15px;
+}
+
+.endereco p {
+    margin-top: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.social-media ul {
+    margin-top: 30px;
+    padding-left: 90px;
+    list-style-type: none;
+    display: flex;
+}
+.social-media ul li {
+    padding-right: 100px;
+}
+
+.social-media ul li i{
+    font-size: 45px;
+    color: white;
+    transition: transform 0.3s ease; 
+}
+
+.social-media ul li i:hover{
+    transform: scale(1.5);
+    color: #ff2e2e;
+}
+
+footer {
+    margin-top: 50px;
+    min-height: 40px;
+    background-color: white;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 10px;
+}
