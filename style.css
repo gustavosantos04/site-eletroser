@@ -82,6 +82,7 @@ main {
 .hero-section {
     position: relative;
     height: 900px; /* Ajuste conforme necessário */
+    
     background-image: 
         linear-gradient(to bottom, #000000 0%, transparent 50%, transparent 50%, #00000062 100%),
         url('./images/805460933406211.jpg');
