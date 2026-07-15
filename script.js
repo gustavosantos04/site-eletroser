@@ -1,29 +1,22 @@
-document.querySelectorAll('.menu-bar a[href^="#"], .overlay a[href^="#"], .about a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = document.querySelectorAll(".site-nav a, .hero-actions a[href^='#']");
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+const setHeaderState = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+};
 
-        if (!targetElement) return; // Verifica se o elemento alvo existe
+setHeaderState();
+window.addEventListener("scroll", setHeaderState, { passive: true });
 
-        // Pega a altura do cabeçalho (menu-bar)
-        const headerOffset = document.querySelector('.menu-bar').offsetHeight;
+navToggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+});
 
-        // Calcula a altura da viewport e da seção
-        const viewportHeight = window.innerHeight;
-        const elementHeight = targetElement.offsetHeight;
-
-        // Calcula a posição do elemento-alvo, ajustando o offset
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-        // Ajusta a posição para centralizar a seção na tela
-        const offsetPosition = elementPosition - headerOffset - (viewportHeight / 2) + (elementHeight / 2);
-
-        // Realiza o scroll suave para a posição calculada
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        header.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
     });
 });

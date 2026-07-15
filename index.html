@@ -3,131 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eletroser: manuten&ccedil;&atilde;o el&eacute;trica e hidr&aacute;ulica predial em Porto Alegre desde 1992. Motobombas, quadros de comando, ilumina&ccedil;&atilde;o de emerg&ecirc;ncia e contratos de manuten&ccedil;&atilde;o.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo-eletroser-favicon.ico" type="image/x-icon">
-    <title>Eletroser LTDA</title>
+    <title>Eletroser LTDA | Manuten&ccedil;&atilde;o el&eacute;trica e hidr&aacute;ulica predial</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo eletroser.png" alt="Logo">
-        </div>
-        <nav>
-            <ul class="menu-bar">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+    <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Eletroser - inicio">
+            <img src="images/logo eletroser.png" alt="Eletroser">
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" data-nav>
+            <a href="#about">Empresa</a>
+            <a href="#services">Servi&ccedil;os</a>
+            <a href="#method">Atendimento</a>
+            <a href="#contact">Contato</a>
+            <a class="nav-cta" href="https://wa.me/5551999662306" target="_blank" rel="noopener">WhatsApp</a>
         </nav>
     </header>
+
     <main>
-        <section class="hero-section" id="home">
-            <div class="overlay">
-                <h1>Eletroser LTDA</h1>
-                <h2>Manutenção elétrica e hidráulica</h2>
-                <a href="#about" class="button">Conheça</a>
+        <section class="hero-section" id="home" aria-label="Eletroser">
+            <div class="hero-content">
+                <p class="eyebrow">Porto Alegre e regi&atilde;o metropolitana</p>
+                <h1>Manuten&ccedil;&atilde;o el&eacute;trica e hidr&aacute;ulica predial desde 1992.</h1>
+                <p class="hero-copy">Contratos, corretivas e preventivas para condom&iacute;nios, empresas e sistemas essenciais que precisam operar sem improviso.</p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="https://wa.me/5551999662306" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        Solicitar atendimento
+                    </a>
+                    <a class="button button-secondary" href="#services">Ver servi&ccedil;os</a>
+                </div>
             </div>
-        </section>
 
-        <section class="about" id="about">
-            <h2>Sobre</h2>
-            <p>Fundada em 17/02/1992 a Eletroser atua no mercado de Manutenção Elétrica/Hidráulica. Trabalhamos com Manutenção Preventiva e Corretiva de Motobombas de Água Potável, Lençóis Freáticos (Submersas), Tubulações de Recalque, Sucção, Quadros de Comando e Elétrica, com qualidade total e compromisso de uma empresa séria e de nome no mercado.</p>
-            <a href="#services">Conheça mais sobre os nossos serviços</a>
-        </section>
-
-        <section class="services" id="services">
-            <div class="background"></div>
-            <h2>Serviços</h2>
-            <div class="list-cards">
-                <div class="card-services">
-                    <h1>Motobombas e bombas submersas</h1>
-                    <img src="images/2694.png" alt="Motobomba">
-                    <ul>
-                        <li>Água potável</li>
-                        <li>Lençol Freático (Submersa/Superfície)</li>
-                    </ul>
+            <div class="hero-proof" aria-label="Destaques da Eletroser">
+                <div>
+                    <strong>32+</strong>
+                    <span>anos de mercado</span>
                 </div>
-
-                <div class="card-services">
-                    <h1>Quadros de comando</h1>
-                    <img src="images/Imagem do WhatsApp de 2024-11-04 à(s) 23.28.02_93d955db.jpg" alt="Quadro de comando">
-                    <ul>
-                        <li>Fabricação e Instalação</li>
-                        <li>Reforma Elétrica</li>
-                        <li>Automatização</li>
-                    </ul>
+                <div>
+                    <strong>24h</strong>
+                    <span>estrutura para urg&ecirc;ncias</span>
                 </div>
-
-                <div class="card-services">
-                    <h1>Iluminação de emergência</h1>
-                    <img src="images/2000lumes foto.jpg" alt="Iluminação de emergência" >
-                    <ul>
-                        <li>Instalação</li>
-                        <li>Manutenção Preventiva</li>
-                        <li>Manutenção Corretiva</li>
-                    </ul>
-                </div>
-                <div class="card-services">
-                    <h1>Manutenção Preventiva e Corretiva</h1>
-                    <img src="images/pngwing.com.png" alt="Manutenção" >
-                    <ul>
-                        <li>Motobombas de água potável</li>
-                        <li>Lençóis freáticos</li>
-                        <li>Tubulações de Recalque, Sucção</li>
-                        <li>Quadros de comando e elétrica</li>
-                    </ul>
-                </div>
-                <div class="card-services">
-                    <h1>Alerta de Incêndio</h1>
-                    <img src="images/PLACA-DE-SINALIZACAO-ALARME-DE-INCENDIO.png" alt="Alerta de Incendio" >
-                    <ul>
-                        <li>Instalação</li>
-                        <li>Manutenção Preventiva</li>
-                        <li>Manutenção Corretiva</li>
-                    </ul>
-                </div>
-                <div class="card-services">
-                    <h1>Contrato de Manutenção Predial</h1>
-                    <img src="images/manutenc3a7c3a3o.png" alt="Iluminação de emergência" >
-                    <ul>
-                        <li>Aterramento Condomínio</li>
-                        <li>Instalação e Manutenção</li>
-                    </ul>
+                <div>
+                    <strong>Predial</strong>
+                    <span>foco em sistemas criticos</span>
                 </div>
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <h2>Contato</h2>
-
-            <div class="container">
-                <div class="contato">
-                    <p>Telefone : 51 3336.2116</p>
-                    <p>Celular : 51 9 9966.2306</p>
-                    <p>E-mail : eletroser@eletroser.com.br</p>
+        <section class="intro-section section" id="about">
+            <div class="section-label">Empresa</div>
+            <div class="intro-grid">
+                <div>
+                    <h2>Uma opera&ccedil;&atilde;o t&eacute;cnica para quem precisa de confian&ccedil;a antes do problema aparecer.</h2>
                 </div>
-                <div class="separator"></div>
-                <div class="endereco">
-                    <div class="mapa">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.275225063038!2d-51.19258452370251!3d-30.057644431890036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519780ff7959035%3A0x154e11c0d1061929!2sR.%20Guilherme%20Alves%2C%201149%20-%20Petr%C3%B3polis%2C%20Porto%20Alegre%20-%20RS%2C%2090680-001!5e0!3m2!1spt-BR!2sbr!4v1725592206356!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="intro-copy">
+                    <p>Fundada em 17/02/1992, a Eletroser atua em manuten&ccedil;&atilde;o el&eacute;trica e hidr&aacute;ulica predial com foco em qualidade, resposta t&eacute;cnica e continuidade operacional.</p>
+                    <p>Atendemos motobombas de &aacute;gua pot&aacute;vel, bombas submersas, tubula&ccedil;&otilde;es de recalque e suc&ccedil;&atilde;o, quadros de comando, automa&ccedil;&atilde;o, ilumina&ccedil;&atilde;o de emerg&ecirc;ncia e sistemas de alarme de inc&ecirc;ndio.</p>
+                </div>
+            </div>
+
+            <div class="trust-strip">
+                <span><i class="fas fa-shield-alt" aria-hidden="true"></i> Preventiva e corretiva</span>
+                <span><i class="fas fa-tools" aria-hidden="true"></i> Equipe tecnica especializada</span>
+                <span><i class="fas fa-building" aria-hidden="true"></i> Contratos prediais</span>
+                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Porto Alegre - RS</span>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="section-heading">
+                <div>
+                    <div class="section-label">Servi&ccedil;os</div>
+                    <h2>Solu&ccedil;&otilde;es para infraestrutura el&eacute;trica, hidr&aacute;ulica e seguran&ccedil;a predial.</h2>
+                </div>
+                <p>Organizamos o atendimento por sistema, com diagn&oacute;stico, execu&ccedil;&atilde;o e acompanhamento para reduzir paradas e manter a instala&ccedil;&atilde;o sob controle.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card featured">
+                    <span class="service-icon"><i class="fas fa-tint" aria-hidden="true"></i></span>
+                    <h3>Motobombas e bombas submersas</h3>
+                    <p>Manuten&ccedil;&atilde;o de sistemas de &aacute;gua pot&aacute;vel, len&ccedil;ol fre&aacute;tico, bombas submersas e de superf&iacute;cie.</p>
+                    <ul>
+                        <li>Diagn&oacute;stico de falhas</li>
+                        <li>Preventiva e corretiva</li>
+                        <li>Recalque e succao</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon"><i class="fas fa-bolt" aria-hidden="true"></i></span>
+                    <h3>Quadros de comando</h3>
+                    <p>Fabrica&ccedil;&atilde;o, instala&ccedil;&atilde;o, reforma el&eacute;trica e automa&ccedil;&atilde;o de comandos para sistemas prediais.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+                    <h3>Ilumina&ccedil;&atilde;o de emerg&ecirc;ncia</h3>
+                    <p>Instala&ccedil;&atilde;o, manuten&ccedil;&atilde;o preventiva e manuten&ccedil;&atilde;o corretiva para rotas e &aacute;reas cr&iacute;ticas.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i></span>
+                    <h3>Alarme de inc&ecirc;ndio</h3>
+                    <p>Instala&ccedil;&atilde;o e manuten&ccedil;&atilde;o de sistemas de alerta para seguran&ccedil;a e regularidade operacional.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon"><i class="fas fa-clipboard-check" aria-hidden="true"></i></span>
+                    <h3>Contrato de manuten&ccedil;&atilde;o</h3>
+                    <p>Planos para condom&iacute;nios e empresas com rotina de inspe&ccedil;&otilde;es, hist&oacute;rico t&eacute;cnico e prioridades de atendimento.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon"><i class="fas fa-plug" aria-hidden="true"></i></span>
+                    <h3>El&eacute;trica predial</h3>
+                    <p>Aterramento, instala&ccedil;&otilde;es, adequa&ccedil;&otilde;es e manuten&ccedil;&atilde;o em componentes el&eacute;tricos essenciais.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="method-section section" id="method">
+            <div class="section-heading">
+                <div>
+                    <div class="section-label">Atendimento</div>
+                    <h2>M&eacute;todo claro, execu&ccedil;&atilde;o t&eacute;cnica e comunica&ccedil;&atilde;o objetiva.</h2>
+                </div>
+            </div>
+
+            <div class="method-grid">
+                <div class="method-step">
+                    <span>01</span>
+                    <h3>Levantamento</h3>
+                    <p>Entendemos o sistema, hist&oacute;rico de falhas, urg&ecirc;ncia e condi&ccedil;&otilde;es de acesso.</p>
+                </div>
+                <div class="method-step">
+                    <span>02</span>
+                    <h3>Diagn&oacute;stico</h3>
+                    <p>Avaliamos causa prov&aacute;vel, riscos, pe&ccedil;as e melhor caminho para corrigir ou prevenir.</p>
+                </div>
+                <div class="method-step">
+                    <span>03</span>
+                    <h3>Execu&ccedil;&atilde;o</h3>
+                    <p>Realizamos o servi&ccedil;o com padr&atilde;o t&eacute;cnico, organiza&ccedil;&atilde;o e registro do que foi feito.</p>
+                </div>
+                <div class="method-step">
+                    <span>04</span>
+                    <h3>Acompanhamento</h3>
+                    <p>Contratos e recorr&ecirc;ncias recebem rotina de manuten&ccedil;&atilde;o para reduzir emerg&ecirc;ncias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="contact-panel">
+                <div class="contact-content">
+                    <div class="section-label">Contato</div>
+                    <h2>Precisa de suporte t&eacute;cnico ou quer estruturar um contrato de manuten&ccedil;&atilde;o?</h2>
+                    <p>Fale com a Eletroser e descreva o sistema, endere&ccedil;o e urg&ecirc;ncia. Retornamos com o encaminhamento adequado.</p>
+
+                    <div class="contact-actions">
+                        <a class="button button-primary" href="https://wa.me/5551999662306" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            Chamar no WhatsApp
+                        </a>
+                        <a class="button button-secondary dark" href="mailto:eletroser@eletroser.com.br">Enviar e-mail</a>
                     </div>
-                    <p>R. Guilherme Alves, 1149 - Petrópolis, Porto Alegre - RS</p>
-                    <p>CEP - 90680-001</p>
+
+                    <dl class="contact-list">
+                        <div>
+                            <dt>Telefone</dt>
+                            <dd><a href="tel:+555133362116">51 3336.2116</a></dd>
+                        </div>
+                        <div>
+                            <dt>Celular</dt>
+                            <dd><a href="tel:+5551999662306">51 9 9966.2306</a></dd>
+                        </div>
+                        <div>
+                            <dt>E-mail</dt>
+                            <dd><a href="mailto:eletroser@eletroser.com.br">eletroser@eletroser.com.br</a></dd>
+                        </div>
+                        <div>
+                            <dt>Endere&ccedil;o</dt>
+                            <dd>R. Guilherme Alves, 1149 - Petr&oacute;polis, Porto Alegre - RS</dd>
+                        </div>
+                    </dl>
                 </div>
-                <div class="separator"></div>
-                <div class="social-media">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/silvio-ricardo-eletroser-338785a0/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://wa.me/+5551999662306" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                    </ul>
+
+                <div class="map-wrap">
+                    <iframe title="Mapa da Eletroser" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.275225063038!2d-51.19258452370251!3d-30.057644431890036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519780ff7959035%3A0x154e11c0d1061929!2sR.%20Guilherme%20Alves%2C%201149%20-%20Petr%C3%B3polis%2C%20Porto%20Alegre%20-%20RS%2C%2090680-001!5e0!3m2!1spt-BR!2sbr!4v1725592206356!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
     </main>
+
+    <a class="floating-whatsapp" href="https://wa.me/5551999662306" target="_blank" rel="noopener" aria-label="Chamar Eletroser no WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
     <footer>
-        <p>Copyright © Eletroser 2024</p>
+        <p>Copyright &copy; Eletroser 2026</p>
+        <a href="https://www.linkedin.com/in/silvio-ricardo-eletroser-338785a0/" target="_blank" rel="noopener">LinkedIn</a>
     </footer>
 
     <script src="script.js"></script>

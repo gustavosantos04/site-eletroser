@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo-eletroser-favicon.ico" type="image/x-icon">
+    <title>Eletroser LTDA | Versao antiga</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        header {
+            min-height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 200px;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #7171ff;
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background-color: #7171ff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+
+        main {
+            min-width: 300px;
+            border: 1px solid black;
+            margin: auto;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 900px;
+            background-image:
+                linear-gradient(to bottom, #000000 0%, transparent 50%, transparent 50%, #00000062 100%),
+                url('./images/805460933406211.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.753);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        .hero-section h1 {
+            font-size: 80px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: "Lato", sans-serif;
+        }
+
+        .hero-section h2 {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+        }
+
+        .overlay a,
+        .about a {
+            padding: 14px 26px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #7171ff;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            text-decoration: none;
+        }
+
+        .overlay a:hover,
+        .about a:hover {
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+            max-width: 1400px;
+            margin: 200px auto 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .about h2,
+        .services h2 {
+            display: flex;
+            justify-content: center;
+            color: white;
+            margin-bottom: 50px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .about p {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            font-size: 26px;
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        .about a {
+            font-size: 17px;
+            display: flex;
+            justify-content: center;
+            width: 450px;
+            margin-bottom: 250px;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+            max-width: 1400px;
+            margin: auto;
+            font-family: "Lato", sans-serif;
+        }
+
+        .list-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 20px;
+            min-width: 400px;
+            max-width: 1400px;
+        }
+
+        .card-services {
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            height: 470px;
+            text-align: center;
+            border: 2px solid #ff2e2e;
+        }
+
+        .card-services h1 {
+            color: white;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 30px 10px;
+        }
+
+        .card-services img {
+            width: 180px;
+            height: 180px;
+            margin: 20px 40px;
+        }
+
+        .card-services ul {
+            list-style-type: circle;
+            padding: 5px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .card-services ul li {
+            padding: 5px 0;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .separator {
+            width: 2px;
+            height: 200px;
+            margin: 0 30px;
+            background-color: #fff;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+            max-width: 1400px;
+            margin: 200px auto 0;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 70px;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .contato,
+        .endereco,
+        .social-media {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+        }
+
+        .contato p {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        .endereco {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+        }
+
+        .endereco p {
+            margin-top: 20px;
+        }
+
+        .social-media ul {
+            margin-top: 30px;
+            padding-left: 90px;
+            list-style-type: none;
+            display: flex;
+        }
+
+        .social-media ul li {
+            padding-right: 100px;
+        }
+
+        .social-media ul li i {
+            font-size: 45px;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media ul li i:hover {
+            transform: scale(1.5);
+            color: #ff2e2e;
+        }
+
+        footer {
+            margin-top: 50px;
+            min-height: 40px;
+            background-color: white;
+        }
+
+        footer p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 2px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo eletroser.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="#home">In&iacute;cio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Servi&ccedil;os</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section" id="home">
+            <div class="overlay">
+                <h1>Eletroser LTDA</h1>
+                <h2>Manuten&ccedil;&atilde;o el&eacute;trica e hidr&aacute;ulica</h2>
+                <a href="#about" class="button">Conhe&ccedil;a</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>Sobre</h2>
+            <p>Fundada em 17/02/1992 a Eletroser atua no mercado de Manuten&ccedil;&atilde;o El&eacute;trica/Hidr&aacute;ulica. Trabalhamos com Manuten&ccedil;&atilde;o Preventiva e Corretiva de Motobombas de &Aacute;gua Pot&aacute;vel, Len&ccedil;&oacute;is Fre&aacute;ticos (Submersas), Tubula&ccedil;&otilde;es de Recalque, Suc&ccedil;&atilde;o, Quadros de Comando e El&eacute;trica, com qualidade total e compromisso de uma empresa s&eacute;ria e de nome no mercado.</p>
+            <a href="#services">Conhe&ccedil;a mais sobre os nossos servi&ccedil;os</a>
+        </section>
+
+        <section class="services" id="services">
+            <div class="background"></div>
+            <h2>Servi&ccedil;os</h2>
+            <div class="list-cards">
+                <div class="card-services">
+                    <h1>Motobombas e bombas submersas</h1>
+                    <img src="images/2694.png" alt="Motobomba">
+                    <ul>
+                        <li>&Aacute;gua pot&aacute;vel</li>
+                        <li>Len&ccedil;ol Fre&aacute;tico (Submersa/Superf&iacute;cie)</li>
+                    </ul>
+                </div>
+
+                <div class="card-services">
+                    <h1>Quadros de comando</h1>
+                    <img src="images/Imagem do WhatsApp de 2024-11-04 à(s) 23.28.02_93d955db.jpg" alt="Quadro de comando">
+                    <ul>
+                        <li>Fabrica&ccedil;&atilde;o e Instala&ccedil;&atilde;o</li>
+                        <li>Reforma El&eacute;trica</li>
+                        <li>Automatiza&ccedil;&atilde;o</li>
+                    </ul>
+                </div>
+
+                <div class="card-services">
+                    <h1>Ilumina&ccedil;&atilde;o de emerg&ecirc;ncia</h1>
+                    <img src="images/2000lumes foto.jpg" alt="Ilumina&ccedil;&atilde;o de emerg&ecirc;ncia">
+                    <ul>
+                        <li>Instala&ccedil;&atilde;o</li>
+                        <li>Manuten&ccedil;&atilde;o Preventiva</li>
+                        <li>Manuten&ccedil;&atilde;o Corretiva</li>
+                    </ul>
+                </div>
+                <div class="card-services">
+                    <h1>Manuten&ccedil;&atilde;o Preventiva e Corretiva</h1>
+                    <img src="images/pngwing.com.png" alt="Manuten&ccedil;&atilde;o">
+                    <ul>
+                        <li>Motobombas de &aacute;gua pot&aacute;vel</li>
+                        <li>Len&ccedil;&oacute;is fre&aacute;ticos</li>
+                        <li>Tubula&ccedil;&otilde;es de Recalque, Suc&ccedil;&atilde;o</li>
+                        <li>Quadros de comando e el&eacute;trica</li>
+                    </ul>
+                </div>
+                <div class="card-services">
+                    <h1>Alerta de Inc&ecirc;ndio</h1>
+                    <img src="images/PLACA-DE-SINALIZACAO-ALARME-DE-INCENDIO.png" alt="Alerta de Incendio">
+                    <ul>
+                        <li>Instala&ccedil;&atilde;o</li>
+                        <li>Manuten&ccedil;&atilde;o Preventiva</li>
+                        <li>Manuten&ccedil;&atilde;o Corretiva</li>
+                    </ul>
+                </div>
+                <div class="card-services">
+                    <h1>Contrato de Manuten&ccedil;&atilde;o Predial</h1>
+                    <img src="images/manutenc3a7c3a3o.png" alt="Ilumina&ccedil;&atilde;o de emerg&ecirc;ncia">
+                    <ul>
+                        <li>Aterramento Condom&iacute;nio</li>
+                        <li>Instala&ccedil;&atilde;o e Manuten&ccedil;&atilde;o</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contato</h2>
+
+            <div class="container">
+                <div class="contato">
+                    <p>Telefone : 51 3336.2116</p>
+                    <p>Celular : 51 9 9966.2306</p>
+                    <p>E-mail : eletroser@eletroser.com.br</p>
+                </div>
+                <div class="separator"></div>
+                <div class="endereco">
+                    <div class="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.275225063038!2d-51.19258452370251!3d-30.057644431890036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519780ff7959035%3A0x154e11c0d1061929!2sR.%20Guilherme%20Alves%2C%201149%20-%20Petr%C3%B3polis%2C%20Porto%20Alegre%20-%20RS%2C%2090680-001!5e0!3m2!1spt-BR!2sbr!4v1725592206356!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p>R. Guilherme Alves, 1149 - Petr&oacute;polis, Porto Alegre - RS</p>
+                    <p>CEP - 90680-001</p>
+                </div>
+                <div class="separator"></div>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/silvio-ricardo-eletroser-338785a0/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://wa.me/+5551999662306" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; Eletroser 2024</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.menu-bar a[href^="#"], .overlay a[href^="#"], .about a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (!targetElement) return;
+
+                const headerOffset = document.querySelector('.menu-bar').offsetHeight;
+                const viewportHeight = window.innerHeight;
+                const elementHeight = targetElement.offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset - (viewportHeight / 2) + (elementHeight / 2);
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
